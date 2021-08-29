@@ -39,6 +39,7 @@ export default function LoginScreen({navigation}) {
             />
             <Button title="Sign in" raised />
             <Button title="Register" onPress={()=>navigation.navigate('Register')} raised containerStyle={styles.btn} />
+            <Button title="Chat" onPress={()=>navigation.navigate('Chat')} raised containerStyle={styles.btn} />
         </View>
     )
 }
