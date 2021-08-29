@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import { Input } from 'react-native-elements'
 import { Button } from 'react-native-elements/dist/buttons/Button'
+import { auth } from '../firebase'
 
 export default function RegisterScreen() {
     const [values,setValues] = useState({
@@ -11,8 +12,12 @@ export default function RegisterScreen() {
         avatar:'',
         name:'',
     })
+
+    const register = () =>{
+        // auth.createUser
+    }
     return (
-        <View>
+        <View style={styles.container}>
             <Input 
                 placeholder="Enter your name"
                 value={values.name}
@@ -43,3 +48,23 @@ export default function RegisterScreen() {
         </View>
     )
 }
+
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 10,
+        marginTop: 30,
+        paddingLeft: 30,
+        paddingRight: 30,
+    },
+    label: {
+        fontSize: 11, color: 'rgba(0,0,0,.7)'
+    },
+    leftIcon: {
+        paddingRight: 10,
+    }
+    ,btn:{
+        marginTop:12,
+    }
+})
