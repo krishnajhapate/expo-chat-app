@@ -5,7 +5,7 @@ import { Input } from 'react-native-elements/dist/input/Input'
 import { Button } from 'react-native-elements'
 import { color } from 'react-native-elements/dist/helpers'
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
 
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
@@ -38,7 +38,7 @@ export default function LoginScreen() {
 
             />
             <Button title="Sign in" raised />
-            <Button title="Register" raised containerStyle={styles.btn} />
+            <Button title="Register" onPress={()=>navigation.navigate('Register')} raised containerStyle={styles.btn} />
         </View>
     )
 }
