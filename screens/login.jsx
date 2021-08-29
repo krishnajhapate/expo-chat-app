@@ -15,6 +15,7 @@ export default function LoginScreen() {
             <Input
                 placeholder="Enter your email"
                 onChangeText={value => setEmail(value)}
+                value={email}
                 label="Email"
                 leftIcon={{ type: 'font-awesome', name: 'envelope', color: 'gray', size: 20 }}
                 labelStyle={styles.label}
@@ -28,6 +29,7 @@ export default function LoginScreen() {
             <Input
                 placeholder="Enter you password"
                 secureTextEntry
+                value={password}
                 label="Password"
                 leftIcon={{ type: 'font-awesome', name: 'lock', color: 'gray', size: 25 }}
                 labelStyle={styles.label}
@@ -36,7 +38,7 @@ export default function LoginScreen() {
 
             />
             <Button title="Sign in" raised />
-            <Button title="Sign up" raised containerStyle={styles.btn} />
+            <Button title="Register" raised containerStyle={styles.btn} />
         </View>
     )
 }
